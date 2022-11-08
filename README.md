@@ -153,6 +153,50 @@ What we want to do now is imagine the following. Note, we don’t actually have 
 
 Now we have a curve - for a fictional population that matches our null hypothesis - with which we can compare our sample.
 
+#### Sample and Compare to Null Hypothesis
+So, how do we check our sample against this null hypothesis curve? First, we define our alternative hypothesis - i.e. this is the thing we’re trying to prove. For the kinds of tests we’re talking about here, this must be related to the null hypothesis - i.e. it must be comparing the same terms, just comparing them with a different operator.
+
++ In our example, because we have the null hypothesis:
+
+  + Exactly 80% of the transactions match the profile
+
++ We would consider this as our alternative hypothesis:
+
+  + More than 80% of the transactions match the profile
+
+Finally, we compare our sample proportion (in our example this was 82%) to the curve for the null hypothesis, and we figure out how likely it is that this sample could have come from a population where the proportion was, in fact, exactly 80%.
+
+![image](https://user-images.githubusercontent.com/99672298/200493873-44660677-b16a-4abc-90e9-0fca492d9c7b.png)
+
+In our example, since we’re checking how likely it is that our real population proportion is greater than 80% (our assumed null hypothesis population proportion), we are, in effect, comparing:
+
++ The area under this curve to the right of where our sample result is.
++ To the total area under this curve.
+
+This fraction is the probability of how likely it is that our sample came from a population that had a proportion that matched our null hypothesis.
+
+**Drawing conclusions about the sample**
+All of the tests that follow derive a result called a p-value. These values are often misunderstood. This misunderstanding can lead the tester to make certain assumptions about the underlying population that cannot be justified.
+
+The p-value is the probability that the sample result could have occurred if the null hypothesis were true.
+
+So, a p-value has no meaning outside of the given sample, and cannot be related to any other sample or p-value, and doesn't give an indication of how accurate the sample value is. So, in our example, had we calculated a p-value of 4%, the following significance levels would have caused us to draw the following conclusions:
+
+#### Significance	                
+
+**5%**
+
+#### Conclusions
+
+The p-value of 4% is less than the significance of 5%.
+
+So, the probability of this sample coming from a population with the values assumed by the null hypothesis is not significant.
+                              
+So, we can reject the null hypothesis, which suggests the alternative hypothesis. NOTE: this doesn’t prove the alternative hypothesis; only that we can feel a degree of confidence that more than 80% of the transactions match our profile.
+                              
+We cannot say anything else about the actual value of the proportion of the underlying population - i.e. we can’t say that it’s likely to be 82%, or even close to 82%
+
+
 ![02 03 2022_14 50 41_REC](https://user-images.githubusercontent.com/99672298/200490854-e2e48e78-76a9-4e63-a96d-b999d37abd72.png)
 ![02 03 2022_14 51 55_REC](https://user-images.githubusercontent.com/99672298/200490895-cf18c898-5ba7-478a-b8e1-bdd4b30b82ff.png)
 ![02 03 2022_14 52 34_REC](https://user-images.githubusercontent.com/99672298/200490910-b56d2d94-112f-4d45-b9c6-332085b7f862.png)
